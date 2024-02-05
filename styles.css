@@ -48,7 +48,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 3rem 5%;
+  padding: 1rem 5%;
   background: rgba(0, 0, 0, 0.925);
   backdrop-filter: blur(10px);
   display: flex;
@@ -98,13 +98,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row; 
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
 
 #about .container {
   padding: 50px;
+  display: flex; /* Add this line */
 }
 
 #about h1 {
@@ -112,7 +113,6 @@ section {
   font-size: 5rem;
   text-align: center;
   gap: 20px;
- 
 }
 
 #about p {
@@ -120,26 +120,10 @@ section {
   color: rgb(0, 0, 0);
   font-weight: 800;
   margin: 0;
+  left : 50px;
 }
 /* contact section */
 
-#contact {
-  background-color: rgb(255, 255, 255);
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-#contact h1 {
-  font-size: 5rem;
-  margin: 0;
-}
-
-#contact p {
-  font-size: 2rem;
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  margin: 0;
-}
 
 /* Experience section */
 
@@ -213,7 +197,7 @@ section {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
-  animation: slideInFromBottom 3s ease-out, fadein 3s;
+  animation: fadein 4s;
 }
 
 .experience-box  .experience-info:hover {
@@ -248,17 +232,14 @@ section {
 
 .hometext {
   width: 24ch;
-  animation: typing 1s steps(24), blink .5s step-end infinite alternate, fadein 3s;
+  animation: typing 1s steps(24), blink .5s step-end infinite alternate, fadein 4s;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
   font-family: monospace;
-  font-size: 5rem;
+  font-size: 3rem;
 
 }
-
-
-
 
 /* Hamburger Menu */
 .hamburger-menu {
@@ -279,21 +260,21 @@ section {
 }
 
 .hamburger-nav a:hover {
-  background-color: #f1f1f1;
-  color: #000;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .hamburger-menu div {
-  width: 2rem;
-  height: 0.2rem;
-  background: black;
+  width: 2.5rem;
+  height: 0.1rem;
+  background: rgb(255, 253, 253);
 }
 
 .dropdown-menu {
   display: none;
   position: absolute;
   left: 0;
-  background-color: #070707;
+  background-color: #1b1b1b;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
   z-index: 1;
@@ -304,6 +285,17 @@ section {
 .dropdown-menu.show {
   display: block;
   opacity: 1;
+}
+
+.triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid black;
+  text-indent: -9999px;
+  animation: fadein 4s;
 }
 
 @media (max-width: 768px) {
@@ -329,6 +321,12 @@ section {
 
   .hometext {
     font-size: 2rem;
+  }
+  .experience-box{
+    flex-direction: column;
+  }
+  .profile-image {
+   display: none;
   }
 }
 
