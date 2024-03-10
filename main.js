@@ -1,10 +1,10 @@
 window.addEventListener('scroll', function() {
   var about = document.querySelector('#about');
   var experience = document.querySelector('#experience');
-  
+  var projects = document.querySelector('#projects');
   var aboutPosition = about.getBoundingClientRect();
   var experiencePosition = experience.getBoundingClientRect();
-
+  var projectsPosition = projects.getBoundingClientRect();
 
   if(aboutPosition.top < window.innerHeight && aboutPosition.bottom > 0) {
     about.style.opacity = '1';
@@ -15,6 +15,11 @@ window.addEventListener('scroll', function() {
     experience.style.opacity = '1';
   } else {
     experience.style.opacity = '0';
+  }
+  if(projectsPosition.top < window.innerHeight && projectsPosition.bottom > 0) {
+    projects.style.opacity = '1';
+  } else {
+    projects.style.opacity = '0';
   }
 });
 

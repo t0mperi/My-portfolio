@@ -230,8 +230,10 @@ section {
 #projects {
   padding: 40px;
   background-color: rgba(238, 236, 236, 0.795);
-  
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
+
 
 #projects h2 {
   margin-bottom: 3rem; 
@@ -458,8 +460,6 @@ footer img:hover {
 .experience-box.worked {
   display: flex; 
 }
-
-
 
   #about p {
     display: block;
