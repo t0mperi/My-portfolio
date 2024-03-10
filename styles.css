@@ -456,14 +456,19 @@ footer img:hover {
   #about p {
     display: block;
     top: 300px;
-    text-align: center;
+    font-size: 1.3rem;
+    text-align: justify-all;
     white-space: wrap;
     max-width: 100%;
   }
 
   .project-grid {
     justify-content: center;
+  }  
+  .textboxes{
+    font-size: 1.3rem;
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
   }
-  
 }
-
