@@ -1,3 +1,5 @@
+// Fade in when scroll down
+
 window.addEventListener('scroll', function() {
   var about = document.querySelector('#about');
   var experience = document.querySelector('#experience');
@@ -31,64 +33,42 @@ hamburgerMenu.addEventListener('click', function() {
   dropdownMenu.classList.toggle('show');
 });
 
+// page scroll and triangle home page
 
+function smoothScroll(target, offset = 0) {
+  const targetElement = document.querySelector(target);
+  if (!targetElement) return;
 
-document.querySelectorAll('a.page-scroll').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+  const targetPosition = targetElement.getBoundingClientRect().top + offset;
+  const startPosition = window.scrollY;
+  const distance = targetPosition - startPosition;
+  const duration = 1500;
+  let start = null;
 
-      const target = document.querySelector(this.getAttribute('href'));
-      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-      const startPosition = window.pageYOffset;
-      const distance = targetPosition - startPosition;
-      const duration = 1500;
-      let start = null;
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    const progress = timestamp - start;
+    window.scrollTo(0, easeInOutExpo(progress, startPosition, distance, duration));
+    if (progress < duration) window.requestAnimationFrame(step);
+  }
 
-      window.requestAnimationFrame(step);
-
-      function step(timestamp) {
-          if (!start) start = timestamp;
-          const progress = timestamp - start;
-          window.scrollTo(0, easeInOutExpo(progress, startPosition, distance, duration));
-          if (progress < duration) window.requestAnimationFrame(step);
-      }
-  });
-});
-
-function easeInOutExpo(t, b, c, d) {
-  t /= d/2;
-  if (t < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
-  t--;
-  return c/2 * (-Math.pow(2, -10 * t) + 2) + b;
+  window.requestAnimationFrame(step);
 }
 
-document.querySelectorAll('a.triangle').forEach(anchor => {
+document.querySelectorAll('a.page-scroll, a.triangle').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      const target = document.querySelector(this.getAttribute('href'));
-      const targetPosition = target.getBoundingClientRect().top;
-      const startPosition = window.pageXOffset;
-      const distance = targetPosition - startPosition;
-      const duration = 1500;
-      let start = null;
-
-      window.requestAnimationFrame(step);
-
-      function step(timestamp) {
-          if (!start) start = timestamp;
-          const progress = timestamp - start;
-          window.scrollTo(0, easeInOutExpo(progress, startPosition, distance, duration));
-          if (progress < duration) window.requestAnimationFrame(step);
-      }
+    e.preventDefault();
+    const target = this.getAttribute('href');
+    const offset = this.classList.contains('page-scroll') ? window.pageYOffset : 0;
+    smoothScroll(target, offset);
   });
 });
 
 function easeInOutExpo(t, b, c, d) {
-  t /= d/2;
-  if (t < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
+  t /= d / 2;
+  if (t < 1) return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
   t--;
-  return c/2 * (-Math.pow(2, -10 * t) + 2) + b;
+  return c / 2 * (-Math.pow(2, -10 * t) + 2) + b;
 }
 
 // Path: main.css
