@@ -57,6 +57,7 @@ section {
   z-index: 100;
 }
 
+
 .logo {
   font-size: 3rem;
   color: rgb(255, 255, 255);
@@ -94,9 +95,10 @@ section {
 /* about section */
 
 #about {
+  background-color: rgba(238, 236, 236, 0.795);
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
   opacity: 0;
@@ -116,10 +118,10 @@ section {
 }
 
 #about p {
+  padding: 10px;
+  margin: 20px;
   text-align: center;
   font-size: 2rem;
-  color: rgb(0, 0, 0);
-  white-space: nowrap; 
 }
 
 /* Experience section */
@@ -152,7 +154,7 @@ section {
   width: 92px; 
   overflow: hidden;
   display: flex;
-  border-radius: 2rem;
+  border-radius: 1rem;
   border: 3px solid transparent;
   transition: 0.5s ease-in-out;
   flex-direction: row;
@@ -164,7 +166,7 @@ section {
 .experience-box:hover {
   border: 3px solid rgb(252, 189, 94);
   filter: grayscale(0%);
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .experience-box img {
@@ -226,53 +228,70 @@ section {
 /*projects section*/
 
 #projects {
-  padding: 20px;
-  background-color: #ffffff;
-  
+  padding: 40px;
+  background-color: rgba(238, 236, 236, 0.795);
 }
 
 #projects h2 {
-  margin-bottom: 8rem;
+  margin-bottom: 3rem; /* Adjusted margin for better spacing */
   font-size: 3rem;
   text-align: center;
-  gap: 20px;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increase min size */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
 
 .project-box {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stack the image and text vertically */
+  align-items: center;
+  width: auto;
+  height: auto;
   border: 1px solid rgb(252, 189, 94);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Add shadow */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-box:hover {
-  transform: scale(1.05); /* Add hover effect */
+  transform: scale(1.05);
 }
 
-.project-box h3 {
-  padding: 20px; /* Increase padding */
+.project-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px 10px 0 0; /* Adjust the border-radius as needed */
+}
+
+.project-info {
+  padding: 10px;
   text-align: center;
-  font-size: 1.5rem; /* Increase font size */
 }
 
-.project-box p {
-  padding: 0 20px 20px; /* Increase padding */
-  font-size: 1.2rem; /* Increase font size */
+.project-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
 }
+
+.project-info p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+
+
 
 .heading h2 {
   font-size: 2rem;
   color: rgb(0, 158, 158);
   gap: 20rem;
-
 }
-
 
 .hometext {
   width: 24ch;
@@ -291,7 +310,7 @@ section {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
+  width: 3rem;
   height: 2rem;
   cursor: pointer;
   z-index: 2;
@@ -301,7 +320,8 @@ section {
   color: #ffffff;
   font-size: 1.2rem;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 15px 10px;
+  text-align: center;
 }
 
 .hamburger-nav a:hover {
@@ -375,7 +395,6 @@ footer img:hover {
   width: 35px;
   height: 35px;
   transition: 0.3s ease-in-out;
-  
 }
 
 .email:hover {
@@ -395,6 +414,13 @@ footer img:hover {
   object-fit: cover;
 }
 
+.textboxes {
+  background-color: #fffefe;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
 
 /* Media Queries */
 
@@ -434,28 +460,18 @@ footer img:hover {
     position: relative;
 }
 .experience-box.worked {
-  display: flex;
-  margin-right: -25px;
-  width: 100px; 
-  height: 100px; 
+  display: flex; 
 }
 
-#about h1 {
-    position: absolute;
-    top: 170px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
+
 
   #about p {
-    font-size: 1.3rem;
-    position: absolute;
+    display: block;
     top: 300px;
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
     white-space: wrap;
+    max-width: 100%;
   }
+  
 }
 

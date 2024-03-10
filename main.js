@@ -63,7 +63,7 @@ document.querySelectorAll('a.triangle').forEach(anchor => {
 
       const target = document.querySelector(this.getAttribute('href'));
       const targetPosition = target.getBoundingClientRect().top;
-      const startPosition = window.pageYOffset;
+      const startPosition = window.pageXOffset;
       const distance = targetPosition - startPosition;
       const duration = 1500;
       let start = null;
