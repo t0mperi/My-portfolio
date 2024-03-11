@@ -1,22 +1,16 @@
+
+/* Typing animation */
+
 @keyframes typing {
     from {
       width: 0;
     }
   }
   
+  /* Blinking animation */
+  
   @keyframes blink {
     50% {
       border-color: transparent;
     }
   }
-
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-}
-    
-}

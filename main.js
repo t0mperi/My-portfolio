@@ -1,6 +1,7 @@
-// Fade in when scroll down
+// Fade in animation when scrolling down
 
 window.addEventListener('scroll', function() {
+
   var about = document.querySelector('#about');
   var experience = document.querySelector('#experience');
   var projects = document.querySelector('#projects');
@@ -8,10 +9,11 @@ window.addEventListener('scroll', function() {
   var experiencePosition = experience.getBoundingClientRect();
   var projectsPosition = projects.getBoundingClientRect();
 
+  // Check if the about section is in view
   if(aboutPosition.top < window.innerHeight && aboutPosition.bottom > 0) {
-    about.style.opacity = '1';
+    about.style.opacity = '1'; // If in view, fade in
   } else {
-    about.style.opacity = '0';
+    about.style.opacity = '0'; // If not in view, fade out
   }
   if(experiencePosition.top < window.innerHeight && experiencePosition.bottom > 0) {
     experience.style.opacity = '1';
@@ -25,7 +27,7 @@ window.addEventListener('scroll', function() {
   }
 });
 
-
+// Hamburger menu btn
 var hamburgerMenu = document.querySelector('.hamburger-menu');
 var dropdownMenu = document.querySelector('.hamburger-nav');
 

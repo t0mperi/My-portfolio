@@ -1,3 +1,4 @@
+/* Styling */
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +21,7 @@ section {
   padding: 10rem 5%;
 }
 
+/* Home page */
 #home {
   display: flex;
   flex-direction: column;
@@ -43,6 +45,7 @@ section {
   align-items: center;
 }
 
+/* Header styling */
 .header {
   position: fixed;
   top: 0;
@@ -57,7 +60,24 @@ section {
   z-index: 100;
 }
 
+.heading h2 {
+  font-size: 2rem;
+  color: rgb(0, 158, 158);
+  gap: 20rem;
+}
 
+.hometext {
+  width: 24ch;
+  animation: typing 1s steps(24), blink .5s step-end infinite alternate, fadein 4s;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 3rem;
+}
+
+
+/* Logo Styling */
 .logo {
   font-size: 3rem;
   color: rgb(255, 255, 255);
@@ -70,6 +90,7 @@ section {
   transform: scale(1.5);
 }
 
+/* Navbar Styling */
 .navbar {
   display: flex;
   flex-direction: row;
@@ -107,7 +128,7 @@ section {
 
 #about .container {
   padding: 50px;
-  display: flex; /* Add this line */
+  display: flex;
 }
 
 #about h1 {
@@ -137,7 +158,6 @@ section {
   font-size: 3rem;
   text-align: center;
   gap: 20px;
-
 }
 
 .experience-container {
@@ -224,6 +244,17 @@ section {
   justify-content: center;
 }
 
+.experience-box.worked {
+  display: flex;
+  width: 180px; 
+  height: 180px; 
+}
+
+.experience-box.worked img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /*projects section*/
 
@@ -261,7 +292,7 @@ section {
 .project-box {
   flex-direction: row;
   transition: 0.5s ease-in-out;
-  padding: 20px; /* Add padding to create a gap between text and small boxes */
+  padding: 20px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -272,7 +303,7 @@ section {
   object-position: center;
   border-radius: 1rem;
   border: 1px solid rgb(252, 189, 94);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(18, 8, 53, 0.096);
   margin-bottom: 10px;
 }
 
@@ -281,35 +312,16 @@ section {
   cursor: pointer;
 }
 
-
 .small-box {
   width: 70px;
   height: 25px;
-  border: 1px solid #000;
+  border: 1px solid rgb(252, 189, 94);
   border-radius: 30rem;
   text-align: center;
   padding: 5px;
-  display: inline-block; /* or use 'inline' */
-  margin-right: 10px; /* Adjust margin as needed */
-}
-
-
-
-.heading h2 {
-  font-size: 2rem;
-  color: rgb(0, 158, 158);
-  gap: 20rem;
-}
-
-.hometext {
-  width: 24ch;
-  animation: typing 1s steps(24), blink .5s step-end infinite alternate, fadein 4s;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 3rem;
-
+  display: inline-block;
+  margin-right: 10px; 
+  gap: 5px;
 }
 
 /* Hamburger Menu */
@@ -360,6 +372,8 @@ section {
   opacity: 1;
 }
 
+/* Home page triangle */
+
 .triangle {
   display: inline-block;
   width: 0;
@@ -372,6 +386,8 @@ section {
   position: relative;
   top: 300px;
 }
+
+/* Footer */
 
 footer {
   justify-content: center;
@@ -410,18 +426,6 @@ footer img:hover {
   cursor: pointer;
 }
 
-.experience-box.worked {
-  display: flex;
-  width: 180px; 
-  height: 180px; 
-}
-
-.experience-box.worked img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .textboxes {
   background-color: #fffefe;
   padding: 10px;
@@ -431,7 +435,7 @@ footer img:hover {
 }
 
 
-/* Media Queries */
+/* Responsive styles for screens <= 768px */
 
 @media (max-width: 768px) {
   .navbar {
@@ -489,6 +493,17 @@ footer img:hover {
     font-size: 1.3rem;
     text-align: left;
     margin: 0px;
+    padding: 0px;
+  }
+
+  .project-grid{
+    display: block;
+  }
+  
+  .project-box img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 10px;
     padding: 0px;
   }
 }
