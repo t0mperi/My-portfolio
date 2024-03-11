@@ -240,40 +240,58 @@ section {
   text-align: center;
 }
 
+.projects h1 {
+  font-size: 2rem;
+ text-align: center;
+ margin-bottom: 5px;
+}
+
+.projects p{
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
 .project-grid {
   display: grid;
-  gap: 200px;
+  gap: 20px;
   justify-content: center;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
 }
 
 .project-box {
-  position: relative;
-  display: flex;
   flex-direction: row;
-  width: auto;
-  height: auto;
-  overflow: hidden;
-  gap: 200px;
   transition: 0.5s ease-in-out;
+  padding: 20px; /* Add padding to create a gap between text and small boxes */
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .project-box img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+  max-width: 500px;
+  max-height: 250px;
   object-position: center;
   border-radius: 1rem;
   border: 1px solid rgb(252, 189, 94);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-   transition: 0.5s ease-in-out;
+  margin-bottom: 10px;
 }
 
 .project-box:hover {
   transform: scale(1.02);
+  cursor: pointer;
 }
 
 
-
+.small-box {
+  width: 70px;
+  height: 25px;
+  border: 1px solid #000;
+  border-radius: 30rem;
+  text-align: center;
+  padding: 5px;
+  display: inline-block; /* or use 'inline' */
+  margin-right: 10px; /* Adjust margin as needed */
+}
 
 
 
@@ -412,8 +430,8 @@ footer img:hover {
   font-size: 2rem;
 }
 
-/* Media Queries */
 
+/* Media Queries */
 
 @media (max-width: 768px) {
   .navbar {
@@ -449,6 +467,7 @@ footer img:hover {
   #about {
     position: relative;
 }
+
 .experience-box.worked {
   display: flex; 
 }
@@ -464,7 +483,8 @@ footer img:hover {
 
   .project-grid {
     justify-content: center;
-  }  
+  } 
+  
   .textboxes{
     font-size: 1.3rem;
     text-align: left;
