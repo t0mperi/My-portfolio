@@ -7,7 +7,7 @@
     <title>Portfolio Henri Tomperi</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="animations.css">
-    <link rel="main.js" href="main.js">
+    <script src="main.js"></script>
 </head>
 
 <body>
@@ -19,24 +19,22 @@
             <a class="page-scroll" href="#projects">Projects</a>
             <a class="page-scroll" href="#contact">Contact</a>
         </nav>
-   
 
-    <div class="hamburger-menu">
-
-        <div><div><br>
-        <div></div><br>
-        <div></div>
-      </div>
-      
-      <nav id="" class="hamburger-nav dropdown-menu">
-        <a class="page-scroll" href="#about">About</a>
-            <a class="page-scroll" href="#experience">Experience</a>
-            <a class="page-scroll" href="#projects">Projects</a>
-            <a class="page-scroll" href="#contact">Contact</a>
-      </nav>
-
+        <div class="hamburger-menu">
+            <div class="hamburger-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            
+            <nav class="hamburger-nav dropdown-menu">
+                <a class="page-scroll" href="#about">About</a>
+                <a class="page-scroll" href="#experience">Experience</a>
+                <a class="page-scroll" href="#projects">Projects</a>
+                <a class="page-scroll" href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
-
 
     <!-- Home tab -->
     <section id="home">
@@ -51,7 +49,7 @@
         <div class="profile-image">
             <img src="pictures\henritomperi.png" alt="Henri Tomperi">
         </div>
-            <div>
+        <div>
             <p>I'm a Software Development student at Haaga-Helia University of Applied Sciences,
                 fueled by a lifelong love for technology and a solid foundation in working with computers.
                 Currently I'm diving into the world of full-stack development.
@@ -59,7 +57,6 @@
             </p>
         </div>
     </section>
-  
 
     <!-- Experience tab -->
     <section class="experience" id="experience">
@@ -69,25 +66,25 @@
             <div class="experience-box">
                 <img src="pictures\html.png" alt="">
                 <div class="experience-info">
-                   <h4>HTML</h4>
+                    <h4>HTML</h4>
                 </div>
             </div>
             <div class="experience-box">
                 <img src="pictures\csharp.png" alt="">
                 <div class="experience-info">
-                <h4>Csharp</h4>
+                    <h4>Csharp</h4>
                 </div>
             </div>
             <div class="experience-box">
                 <img src="pictures\sql.jpg" alt="">
                 <div class="experience-info">
-                   <h4>SQL</h4>
+                    <h4>SQL</h4>
                 </div>
             </div>
             <div class="experience-box">
                 <img src="pictures\css.jpg" alt="">
                 <div class="experience-info">
-                   <h4>CSS</h4>
+                    <h4>CSS</h4>
                 </div>
             </div>
             <div class="experience-box">
@@ -98,45 +95,46 @@
             </div>
         </div>
 
-       <div> 
+        <div>
             <p>Here are some of the tools I've worked with</p>
             <div class="experience-container">
                 <div class="experience-box">
                     <img src="pictures\visualstudio.png" alt="">
                     <div class="experience-info">
                         <h4>Visual Studio</h4>
-                     </div>
-            </div>
-            
-            <div class="experience-box">
-                <img src="pictures\vscode.png" alt="">
-                <div class="experience-info">
-                    <h4>Visual Studio Code</h4>
-                 </div>
-            </div>
+                    </div>
+                </div>
 
-            <div class="experience-box">
-                <img src="pictures\github.png" alt="">
-                <div class="experience-info">
-                    <h4>Github</h4>
-                 </div>
-            </div>
-            
-            <div class="experience-box">
-                <img src="pictures\azure.png" alt="">
-                <div class="experience-info">
-                    <h4>Microsoft Azure</h4>
-                 </div>
+                <div class="experience-box">
+                    <img src="pictures\vscode.png" alt="">
+                    <div class="experience-info">
+                        <h4>Visual Studio Code</h4>
+                    </div>
+                </div>
+
+                <div class="experience-box">
+                    <img src="pictures\github.png" alt="">
+                    <div class="experience-info">
+                        <h4>Github</h4>
+                    </div>
+                </div>
+
+                <div class="experience-box">
+                    <img src="pictures\azure.png" alt="">
+                    <div class="experience-info">
+                        <h4>Microsoft Azure</h4>
+                    </div>
+                </div>
             </div>
         </div>
-        
+
         <div>
             <p>Where I've worked</p>
             <div class="experience-container">
                 <div class="experience-box worked">
                     <img src="pictures\enstolegrand.jpg" alt="">
-                    <div class="experience-info">       
-                    </div> 
+                    <div class="experience-info">
+                    </div>
                 </div>
                 <div class="textboxes">
                     I've worked at Ensto Legrand.<br>
@@ -148,7 +146,7 @@
         </div>
     </section>
 
- <!-- Projects tab -->
+    <!-- Projects tab -->
     <section class="projects" id="projects">
         <h2>Projects</h2>
         <div class="project-grid">
@@ -168,12 +166,12 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="project-box">
                 <a href="projects.html" target="_blank"><img src="pictures\matte.jpg" alt="Project Image"></a>
                 <div>
                     <h1>More projects will be added soon.</h1>
-                    
+
                     <div class="small-box">
                         HTML
                     </div>
@@ -185,9 +183,9 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </section>
-    
+
     <!-- contact footer-->
     <footer class="contact" id="contact">
         <p>Get in touch</p>
@@ -203,7 +201,6 @@
         </a>
     </footer>
 
-    <script src="main.js"></script>
 </body>
 
 </html>
