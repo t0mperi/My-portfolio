@@ -35,14 +35,33 @@ section {
 }
 
 .profile-image {
-  border: 2px solid rgb(250, 250, 250);
+  border: 3px solid rgb(252, 189, 94);
   overflow: hidden;
   display: flex;
-  height: 300px;
-  width: 250px;
+  height: 280px;
+  width: 280px;
   margin: 20px;
   border-radius: 50%;
   align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.profile-image:hover img {
+  transform: scale(1.05);
 }
 
 /* Header styling */
@@ -75,7 +94,6 @@ section {
   font-family: monospace;
   font-size: 3rem;
 }
-
 
 /* Logo Styling */
 .logo {
@@ -264,7 +282,6 @@ section {
   transition: opacity 1s ease-in-out;
 }
 
-
 #projects h2 {
   margin-bottom: 8rem; 
   font-size: 3rem;
@@ -433,7 +450,6 @@ footer img:hover {
   text-align: center;
   font-size: 2rem;
 }
-
 
 /* Responsive styles for screens <= 768px */
 
